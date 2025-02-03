@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        :root {
+
+            --bg-color: #ffffff;
+
+            --text-color: #333;
+
+            --primary-color: #af4c4c;
+
+        }
+
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background: var(--bg-color);
+
+            color: var(--text-color);
+
+            transition: all 0.3s ease-in-out;
+
+        }
+
+
+
+        header {
+
+            background: var(--primary-color);
+
+            color: rgb(255, 255, 255);
+
+            padding: 1rem;
+
+            text-align: center;
+
+        }
+
+
+
+        nav ul {
+
+            list-style: none;
+
+            padding: 0;
+
+        }
+
+
+
+        nav ul li {
+
+            display: inline;
+
+            margin: 0 15px;
+
+        }
+
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+
+
+        button {
+
+            background: var(--text-color);
+
+            color: var(--bg-color);
+
+            padding: 8px 15px;
+
+            border: none;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            margin-top: 10px;
+
+        }
+
+
+
+        button:hover {
+
+            opacity: 0.8;
+
+        }
+
+
+
+        section {
+
+            padding: 20px;
+
+            margin: 20px;
+
+            background: white;
+
+            border-radius: 8px;
+
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        .project {
+
+            border: 1px solid #ddd;
+
+            padding: 10px;
+
+            margin-top: 10px;
+
+            border-radius: 5px;
+
+        }
+
+
+
+        /* Dark Theme */
+
+        .dark-mode {
+
+            --bg-color: #222;
+
+            --text-color: #fff;
+
+            --primary-color: #ff9800;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>My Portfolio</h1>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <button id="theme-toggle">Change Theme</button>
+
+    </header>
+
+
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>"Web development is the process of building and maintaining websites and web applications. It involves designing user interfaces, writing code, and managing databases to create interactive and dynamic experiences on the internet.
+             Developers use technologies like HTML, CSS, JavaScript, and frameworks to bring ideas to life online.</p>
+
+    </section>
+
+
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project">
+
+            <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg" alt="Project 1 Screenshot">
+
+            <h3>Project 1</h3>
+
+            <p>Involves both frontend and backend development. Requires knowledge of databases, servers, and client-side technologies.I create this project </p>
+
+        </div>
+
+        <div class="project">
+
+            <h3>Project 2</h3>
+
+            <img src="https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?s=612x612&w=0&k=20&c=ysEsVw3q2axYt3oVZAuQjtHRlN3lY-U_e0ikK5yKIXQ=" alt="Project 1 Screenshot">
+
+            <p>Focuses on the user interface (UI) and user experience Uses languages like HTML, CSS, and JavaScript.
+
+                Frameworks and libraries such as React, Angular, and Vue.js help build dynamic interfaces.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="contact">
+
+        <h2>Contact:7207611036</h2>
+
+        <p>Email: sebbu@gmail.com</p>
+
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">sebbuusername</a></p>
+
+    </section>
+
+
+
+    <script>
+
+        const themeToggle = document.getElementById("theme-toggle");
+
+        const body = document.body;
+
+
+
+        // Load theme from local storage
+
+        if (localStorage.getItem("theme") === "dark") {
+
+            body.classList.add("dark-mode");
+
+        }
+
+
+
+        themeToggle.addEventListener("click", () => {
+
+            body.classList.toggle("dark-mode");
+
+
+
+            // Save theme preference
+
+            if (body.classList.contains("dark-mode")) {
+
+                localStorage.setItem("theme", "dark");
+
+            } else {
+
+                localStorage.setItem("theme", "light");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
